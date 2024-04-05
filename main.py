@@ -6,7 +6,50 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
+#functional coding
 
+def total():
+     
+    
+     vegpizzaprice = int(VegpizzaEntry.get())*90
+     pannerpizzaprice = int(PaneerpizzaEntry.get())*120
+     cheezpizaaprice = int(cheezpizzaEntry.get())*130
+     italianpizzaprice = int(ItalianpizzaEntry.get())*150
+     greekpizzaprice = int(GreekpizzaEntry.get())*130
+     margeritapizzaprice = int(MargeritapizzaEntry.get())*200
+     steamvegmomosprice = int(SteamVegmomosEntry.get())*80
+     friedvegmomosprice = int(FriedVegmomosEntry.get())*90
+     Steampaneermomosprice = int(SteampaneermomosEntry.get())*100
+     friedpaneermomosprice = int(FriedpaneermomosEntry.get())*120
+     chickenmomosprice = int(ChickenmomosEntry.get())*150
+     chillimomosprice = int(ChillimomosEntry.get())*140
+     burgerprice = int(BurgerEntry.get())*50
+     sandwichprice = int(SandwichEntry.get())*70
+     cachoriprice = int(CachoriEntry.get())*30
+     coldcofeeprice = int(ColdcofeeEntry.get())*50
+     manchurianprice = int(ManchurianEntry.get())*70
+     noodlesprice = int(NoodlesEntry.get())*60
+     
+     
+     
+     totalpizaaprice = vegpizzaprice + pannerpizzaprice + cheezpizaaprice + italianpizzaprice + greekpizzaprice + margeritapizzaprice
+
+     totalmomosprice = steamvegmomosprice + friedvegmomosprice + Steampaneermomosprice + friedpaneermomosprice + chickenmomosprice + chillimomosprice
+
+     totalcomboprice = burgerprice + sandwichprice + cachoriprice + coldcofeeprice + manchurianprice + noodlesprice
+
+     momosprizeEntry.insert(0,f'{totalmomosprice} Rs')
+
+     pizaaprizeEntry.insert(0,f'{totalpizaaprice} Rs')
+
+     comboprizeEntry.insert(0,f'{totalcomboprice} Rs')
+
+
+
+    #  momos calculation
+
+
+    
 
 
 
@@ -98,6 +141,7 @@ VegpizzaLabel.grid(row=0, column=0, pady=9, padx=10, sticky="w")
 VegpizzaEntry = Entry( PizzaFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 VegpizzaEntry.grid(row=0, column=1, pady=9, padx=10)
 
+VegpizzaEntry.insert(0,0)
 
 # paneer pizza block
 
@@ -106,7 +150,7 @@ PaneerpizzaLabel.grid(row=1, column=0, pady=9, padx=10, sticky="w")
 
 PaneerpizzaEntry = Entry( PizzaFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 PaneerpizzaEntry.grid(row=1, column=1, pady=9, padx=10)
-
+PaneerpizzaEntry.insert(0,0)
 # cheez pizza block
 
 cheezpizzaLabel = Label(PizzaFrame, text="Cheez pizza", font=("times new roman", 15, "bold"), bg="pink",fg="black")
@@ -114,7 +158,7 @@ cheezpizzaLabel.grid(row=2, column=0, pady=9, padx=10, sticky="w")
 
 cheezpizzaEntry = Entry( PizzaFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 cheezpizzaEntry.grid(row=2, column=1, pady=9, padx=10)
-
+cheezpizzaEntry.insert(0,0)
 
 # italian pizza block
 ItalianpizzaLabel = Label(PizzaFrame, text="Italian pizza", font=("times new roman", 15, "bold"), bg="pink",fg="black")
@@ -122,14 +166,14 @@ ItalianpizzaLabel.grid(row=3, column=0, pady=9, padx=10, sticky="w")
 
 ItalianpizzaEntry = Entry( PizzaFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 ItalianpizzaEntry.grid(row=3, column=1, pady=9, padx=10)
-
+ItalianpizzaEntry.insert(0,0)
 #Greek pizza
 GreekpizzaLabel = Label(PizzaFrame, text="Greek pizza", font=("times new roman", 15, "bold"), bg="pink",fg="black")
 GreekpizzaLabel.grid(row=4, column=0, pady=9, padx=10, sticky="w")
 
 GreekpizzaEntry = Entry( PizzaFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 GreekpizzaEntry.grid(row=4, column=1, pady=9, padx=10)
-
+GreekpizzaEntry.insert(0,0)
 
 #Margherita pizza
 
@@ -138,7 +182,7 @@ MargeritapizzaLabel.grid(row=5, column=0, pady=9, padx=10, sticky="w")
 
 MargeritapizzaEntry = Entry( PizzaFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 MargeritapizzaEntry.grid(row=5, column=1, pady=9, padx=10)
-
+MargeritapizzaEntry.insert(0,0)
 
 
 # momos div
@@ -152,7 +196,7 @@ SteamVegmomosLabel.grid(row=0, column=0, pady=9, padx=10, sticky="w")
 
 SteamVegmomosEntry = Entry( momosFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 SteamVegmomosEntry.grid(row=0, column=1, pady=9, padx=10)
-
+SteamVegmomosEntry.insert(0,0)
 
 # friedvegmomos div
 FriedVegmomosLabel = Label(momosFrame, text="fried veg", font=("times new roman", 15, "bold"), bg="pink",fg="black")
@@ -160,7 +204,7 @@ FriedVegmomosLabel.grid(row=1, column=0, pady=9, padx=10, sticky="w")
 
 FriedVegmomosEntry = Entry( momosFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 FriedVegmomosEntry.grid(row=1, column=1, pady=9, padx=10)
-
+FriedVegmomosEntry.insert(0,0)
 
 #steampaneermomos div
 SteampaneermomosLabel = Label(momosFrame, text="Steam paneer", font=("times new roman", 15, "bold"), bg="pink",fg="black")
@@ -168,7 +212,7 @@ SteampaneermomosLabel.grid(row=2, column=0, pady=9, padx=10, sticky="w")
 
 SteampaneermomosEntry = Entry( momosFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 SteampaneermomosEntry.grid(row=2, column=1, pady=9, padx=10)
-
+SteampaneermomosEntry.insert(0,0)
 
 #friedpaneermomos div
 FriedpaneermomosLabel = Label(momosFrame, text="Fried paneer", font=("times new roman", 15, "bold"), bg="pink",fg="black")
@@ -176,7 +220,7 @@ FriedpaneermomosLabel.grid(row=3, column=0, pady=9, padx=10, sticky="w")
 
 FriedpaneermomosEntry = Entry( momosFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 FriedpaneermomosEntry.grid(row=3, column=1, pady=9, padx=10)
-
+FriedpaneermomosEntry.insert(0,0)
 
 #chickenmomos div
 ChickenmomosLabel = Label(momosFrame, text="Chicken", font=("times new roman", 15, "bold"), bg="pink",fg="black")
@@ -184,7 +228,7 @@ ChickenmomosLabel.grid(row=4, column=0, pady=9, padx=10, sticky="w")
 
 ChickenmomosEntry = Entry( momosFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 ChickenmomosEntry.grid(row=4, column=1, pady=9, padx=10)
-
+ChickenmomosEntry.insert(0,0)
 
 #chillimomos div
 ChillimomosLabel = Label(momosFrame, text="Chilli", font=("times new roman", 15, "bold"), bg="pink",fg="black")
@@ -192,7 +236,7 @@ ChillimomosLabel.grid(row=5, column=0, pady=9, padx=10, sticky="w")
 
 ChillimomosEntry = Entry( momosFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 ChillimomosEntry.grid(row=5, column=1, pady=9, padx=10)
-
+ChillimomosEntry.insert(0,0)
 
 
 # Combo div
@@ -205,28 +249,28 @@ BurgerLabel.grid(row=0, column=0, pady=9, padx=10, sticky="w")
 
 BurgerEntry = Entry( ComboFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 BurgerEntry.grid(row=0, column=1, pady=9, padx=10)
-
+BurgerEntry.insert(0,0)
 #sandwich
 SandwichLabel = Label(ComboFrame, text="Sandwich", font=("times new roman", 15, "bold"), bg="pink",fg="black")
 SandwichLabel.grid(row=1, column=0, pady=9, padx=10, sticky="w")
 
 SandwichEntry = Entry( ComboFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 SandwichEntry.grid(row=1, column=1, pady=9, padx=10)
-
+SandwichEntry.insert(0,0)
 #cachori
 CachoriLabel = Label(ComboFrame, text="Cachori", font=("times new roman", 15, "bold"), bg="pink",fg="black")
 CachoriLabel.grid(row=2, column=0, pady=9, padx=10, sticky="w")
 
 CachoriEntry = Entry( ComboFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 CachoriEntry.grid(row=2, column=1, pady=9, padx=10)
-
+CachoriEntry.insert(0,0)
 #cold coffe
 ColdcofeeLabel = Label(ComboFrame, text="Cold Cofee", font=("times new roman", 15, "bold"), bg="pink",fg="black")
 ColdcofeeLabel.grid(row=3, column=0, pady=9, padx=10, sticky="w")
 
 ColdcofeeEntry = Entry( ComboFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 ColdcofeeEntry.grid(row=3, column=1, pady=9, padx=10)
-
+ColdcofeeEntry.insert(0,0)
 #machurian
 
 ManchurianLabel = Label(ComboFrame, text="Manchurian", font=("times new roman", 15, "bold"), bg="pink",fg="black")
@@ -234,14 +278,14 @@ ManchurianLabel.grid(row=4, column=0, pady=9, padx=10, sticky="w")
 
 ManchurianEntry = Entry( ComboFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 ManchurianEntry.grid(row=4, column=1, pady=9, padx=10)
-
+ManchurianEntry.insert(0,0)
 # noodles
 NoodlesLabel = Label(ComboFrame, text="Noodles", font=("times new roman", 15, "bold"), bg="pink",fg="black")
 NoodlesLabel.grid(row=5, column=0, pady=9, padx=10, sticky="w")
 
 NoodlesEntry = Entry( ComboFrame, font=("times new roman", 15, "bold"), width=10,bd=5)
 NoodlesEntry.grid(row=5, column=1, pady=9, padx=10)
-
+NoodlesEntry.insert(0,0)
 
 # bill frame
 
@@ -272,11 +316,11 @@ pizaaprizeEntry = Entry(billmenuFrame, font=("times new roman",15,"bold"), width
 pizaaprizeEntry.grid(row=0, column=1, pady=9, padx=10)
 
 
-pizaaprizeLabel = Label(billmenuFrame, text="Pizza tax", font=("times new roman", 15 , "bold"),bg="pink", fg="black") 
-pizaaprizeLabel.grid(row=0, column=2, pady=9, padx=10,sticky="w")
+pizaaprize1Label = Label(billmenuFrame, text="Pizza tax", font=("times new roman", 15 , "bold"),bg="pink", fg="black") 
+pizaaprize1Label.grid(row=0, column=2, pady=9, padx=10,sticky="w")
 
-pizaaprizeEntry = Entry(billmenuFrame, font=("times new roman",15,"bold"), width=10,bd=5)
-pizaaprizeEntry.grid(row=0, column=3, pady=9, padx=10)
+pizaaprize1Entry = Entry(billmenuFrame, font=("times new roman",15,"bold"), width=10,bd=5)
+pizaaprize1Entry.grid(row=0, column=3, pady=9, padx=10)
 
 
 
@@ -288,11 +332,11 @@ momosprizeLabel.grid(row=1, column=0, pady=9, padx=10,sticky="w")
 momosprizeEntry = Entry(billmenuFrame, font=("times new roman",15,"bold"), width=10,bd=5)
 momosprizeEntry.grid(row=1, column=1, pady=9, padx=10)
 
-momosprizeLabel = Label(billmenuFrame, text="Momos tax", font=("times new roman", 15 , "bold"),bg="pink", fg="black") 
-momosprizeLabel.grid(row=1, column=2, pady=9, padx=10,sticky="w")
+momosprize1Label = Label(billmenuFrame, text="Momos tax", font=("times new roman", 15 , "bold"),bg="pink", fg="black") 
+momosprize1Label.grid(row=1, column=2, pady=9, padx=10,sticky="w")
 
-momosprizeEntry = Entry(billmenuFrame, font=("times new roman",15,"bold"), width=10,bd=5)
-momosprizeEntry.grid(row=1, column=3, pady=9, padx=10)
+momosprize1Entry = Entry(billmenuFrame, font=("times new roman",15,"bold"), width=10,bd=5)
+momosprize1Entry.grid(row=1, column=3, pady=9, padx=10)
 
 
 
@@ -305,11 +349,11 @@ comboprizeEntry = Entry(billmenuFrame, font=("times new roman",15,"bold"), width
 comboprizeEntry.grid(row=2, column=1, pady=9, padx=10)
 
 
-comboprizeLabel = Label(billmenuFrame, text="Combo tax", font=("times new roman", 15 , "bold"),bg="pink", fg="black") 
-comboprizeLabel.grid(row=2, column=2, pady=9, padx=10,sticky="w")
+comboprize1Label = Label(billmenuFrame, text="Combo tax", font=("times new roman", 15 , "bold"),bg="pink", fg="black") 
+comboprize1Label.grid(row=2, column=2, pady=9, padx=10,sticky="w")
 
-comboprizeEntry = Entry(billmenuFrame, font=("times new roman",15,"bold"), width=10,bd=5)
-comboprizeEntry.grid(row=2, column=3, pady=9, padx=10)
+comboprize1Entry = Entry(billmenuFrame, font=("times new roman",15,"bold"), width=10,bd=5)
+comboprize1Entry.grid(row=2, column=3, pady=9, padx=10)
 
 
 
@@ -317,7 +361,7 @@ ButtonFrame = Frame(billmenuFrame, bd=8, relief=GROOVE)
 ButtonFrame.grid(row=0, column=4, rowspan=3)
 
 
-totalButton = Button(ButtonFrame, text="Total", font=("arial", 16, "bold"), bg="hot pink", fg="black", width=8, pady=10, )
+totalButton = Button(ButtonFrame, text="Total", font=("arial", 16, "bold"), bg="hot pink", fg="black", width=8, pady=10, command= total)
 totalButton.grid(row=0, column=0, pady=20, padx=5)
 
 billButton = Button(ButtonFrame, text="Bill", font=("arial", 16, "bold"), bg="hot pink", fg="black", width=8, pady=10)
